@@ -16,7 +16,7 @@ function fetchQuotes(){
       // console.log("rails obj", quote)
       let u = new Quote(quote.id, quote.quote)
       u.renderQuote();
-      console.log("js object", quote)
+      // console.log("js object", quote)
     }
   })
 }

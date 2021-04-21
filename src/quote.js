@@ -1,17 +1,13 @@
 class Quote{
     constructor(quote, id){
-        this.id = id
         this.quote = quote;
+        this.id = id
     }
 // render quote instance method
 
     renderQuote(){
         let quoteBox = document.getElementById("quote")
-
-        quoteBox.innerHTML +=
-
-        `
-        Quote: ${quote.id} this!
-        `
+        quote.innerHTML +=
+        `${this.quote}`
     }
 }

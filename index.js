@@ -14,7 +14,7 @@ function fetchQuotes(){
   .then(quotes => {
     for (const quote of quotes){
       // console.log("rails obj", quote)
-      let u = new Quote(quote.id, quote.quote)
+      let u = new Quote(quote.quote)
       u.renderQuote();
       // console.log("js object", quote)
     }

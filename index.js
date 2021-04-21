@@ -12,14 +12,22 @@ function fetchQuotes(){
   fetch(`${BASE_URL}/quotes`)
   .then(resp => resp.json())
   .then(quotes => {
-    for (const quote of quotes){
-      // console.log("rails obj", quote)
-      let u = new Quote(quote.quote)
-      u.renderQuote();
-      // console.log("js object", quote)
-    }
+  // for (const quote of quotes){
+    // console.log("rails obj", quote)
+    // let u = new Quote(quote.quote)
+    // u.renderQuote();
+    // console.log("js object", quote)
+  
+    const quote = quotes[Math.floor(Math.random() * quotes.length)]
+    u = new Quote(quote.quote)
+    u.renderQuote()
+})
+}
+
+function fetchCharacter(){
+  fetch(`${BASE_URL}/characters`)
+  .then(resp => resp.json())
+  .then(qcharacters => {
+    const character = 
   })
 }
-//create - create a new quote
-
-// delete - delete a quote
